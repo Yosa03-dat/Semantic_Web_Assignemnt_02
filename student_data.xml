@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uni:studentRecords
+    xmlns:uni="https://sab.ac.lk/university/students"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://sab.ac.lk/university/students student_data.xsd">
+
+    <uni:student id="S001">
+        <uni:personalInfo>
+            <uni:fullName>Kamal Perera</uni:fullName>
+            <uni:email>kamal.perera@sab.ac.lk</uni:email>
+            <uni:dateOfBirth>2002-05-14</uni:dateOfBirth>
+        </uni:personalInfo>
+        <uni:academicInfo faculty="Faculty of Computing" department="Department of Computing" year="3" semester="1">
+            <uni:programme code="DS">BSc (Hons) in Data Science</uni:programme>
+        </uni:academicInfo>
+        <uni:courses>
+            <uni:course code="DS5103" credits="2">
+                <uni:title>Semantic Web</uni:title>
+                <uni:lecturer>Dr. Kavinda Silva</uni:lecturer>
+                <uni:grade>A</uni:grade>
+            </uni:course>
+            <uni:course code="DS4101" credits="3">
+                <uni:title>Advanced Database Management Systems</uni:title>
+                <uni:lecturer>Dr. Nadeesha Fernando</uni:lecturer>
+                <uni:grade>A-</uni:grade>
+            </uni:course>
+            <uni:course code="SE8111" credits="3">
+                <uni:title>Artificial Intelligence</uni:title>
+                <uni:lecturer>Dr. Kavinda Silva</uni:lecturer>
+                <uni:grade>B+</uni:grade>
+            </uni:course>
+        </uni:courses>
+    </uni:student>
+
+    <uni:student id="S002">
+        <uni:personalInfo>
+            <uni:fullName>Nimasha Dilrukshi</uni:fullName>
+            <uni:email>nimasha.dilrukshi@sab.ac.lk</uni:email>
+            <uni:dateOfBirth>2001-11-02</uni:dateOfBirth>
+        </uni:personalInfo>
+        <uni:academicInfo faculty="Faculty of Computing" department="Department of Computing" year="4" semester="1">
+            <uni:programme code="SE">BSc (Hons) in Software Engineering</uni:programme>
+        </uni:academicInfo>
+        <uni:courses>
+            <uni:course code="SE8111" credits="3">
+                <uni:title>Artificial Intelligence</uni:title>
+                <uni:lecturer>Dr. Kavinda Silva</uni:lecturer>
+                <uni:grade>A</uni:grade>
+            </uni:course>
+            <uni:course code="SE8202" credits="2">
+                <uni:title>Software Project Management</uni:title>
+                <uni:lecturer>Mr. Ruwan Jayasena</uni:lecturer>
+                <uni:grade>B</uni:grade>
+            </uni:course>
+        </uni:courses>
+    </uni:student>
+
+    <uni:student id="S003">
+        <uni:personalInfo>
+            <uni:fullName>Ashen Bandara</uni:fullName>
+            <uni:email>ashen.bandara@sab.ac.lk</uni:email>
+            <uni:dateOfBirth>2002-02-27</uni:dateOfBirth>
+        </uni:personalInfo>
+        <uni:academicInfo faculty="Faculty of Computing" department="Department of Information Systems" year="2" semester="2">
+            <uni:programme code="IS">BSc (Hons) in Information Systems</uni:programme>
+        </uni:academicInfo>
+        <uni:courses>
+            <uni:course code="IS4107" credits="2">
+                <uni:title>Professionalism and Ethics in Computing</uni:title>
+                <uni:lecturer>Mrs. Chathurika Perera</uni:lecturer>
+                <uni:grade>A</uni:grade>
+            </uni:course>
+            <uni:course code="IS4210" credits="3">
+                <uni:title>Business Intelligence</uni:title>
+                <uni:lecturer>Dr. Nadeesha Fernando</uni:lecturer>
+                <uni:grade>A</uni:grade>
+            </uni:course>
+        </uni:courses>
+    </uni:student>
+
+    <uni:student id="S004">
+        <uni:personalInfo>
+            <uni:fullName>Thilini Wickramasinghe</uni:fullName>
+            <uni:email>thilini.wickramasinghe@sab.ac.lk</uni:email>
+            <uni:dateOfBirth>2003-08-19</uni:dateOfBirth>
+        </uni:personalInfo>
+        <uni:academicInfo faculty="Faculty of Computing" department="Department of Computing" year="1" semester="2">
+            <uni:programme code="DS">BSc (Hons) in Data Science</uni:programme>
+        </uni:academicInfo>
+        <uni:courses>
+            <uni:course code="DS1101" credits="3">
+                <uni:title>Introduction to Programming</uni:title>
+                <uni:lecturer>Mr. Ruwan Jayasena</uni:lecturer>
+                <uni:grade>B+</uni:grade>
+            </uni:course>
+        </uni:courses>
+    </uni:student>
+
+    <uni:student id="S005">
+        <uni:personalInfo>
+            <uni:fullName>Dinuka Rathnayake</uni:fullName>
+            <uni:email>dinuka.rathnayake@sab.ac.lk</uni:email>
+            <uni:dateOfBirth>2001-06-30</uni:dateOfBirth>
+        </uni:personalInfo>
+        <uni:academicInfo faculty="Faculty of Computing" department="Department of Computing" year="4" semester="1">
+            <uni:programme code="DS">BSc (Hons) in Data Science</uni:programme>
+        </uni:academicInfo>
+        <uni:courses>
+            <uni:course code="DS5103" credits="2">
+                <uni:title>Semantic Web</uni:title>
+                <uni:lecturer>Dr. Kavinda Silva</uni:lecturer>
+                <uni:grade>B</uni:grade>
+            </uni:course>
+            <uni:course code="DS4101" credits="3">
+                <uni:title>Advanced Database Management Systems</uni:title>
+                <uni:lecturer>Dr. Nadeesha Fernando</uni:lecturer>
+                <uni:grade>B+</uni:grade>
+            </uni:course>
+        </uni:courses>
+    </uni:student>
+
+</uni:studentRecords>

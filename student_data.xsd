@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:uni="https://sab.ac.lk/university/students"
+           targetNamespace="https://sab.ac.lk/university/students"
+           elementFormDefault="qualified">
+
+    <!-- Root element: a collection of one or more students -->
+    <xs:element name="studentRecords">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="student" type="uni:StudentType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- A single student record -->
+    <xs:complexType name="StudentType">
+        <xs:sequence>
+            <xs:element name="personalInfo" type="uni:PersonalInfoType"/>
+            <xs:element name="academicInfo" type="uni:AcademicInfoType"/>
+            <xs:element name="courses" type="uni:CoursesType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="uni:StudentIdType" use="required"/>
+    </xs:complexType>
+
+    <!-- Personal information: primary content -> modelled as elements -->
+    <xs:complexType name="PersonalInfoType">
+        <xs:sequence>
+            <xs:element name="fullName" type="xs:string"/>
+            <xs:element name="email" type="uni:EmailType"/>
+            <xs:element name="dateOfBirth" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Academic information: faculty/department/year/semester are compact
+         classification metadata -> modelled as attributes -->
+    <xs:complexType name="AcademicInfoType">
+        <xs:sequence>
+            <xs:element name="programme" type="uni:ProgrammeType"/>
+        </xs:sequence>
+        <xs:attribute name="faculty" type="xs:string" use="required"/>
+        <xs:attribute name="department" type="xs:string" use="required"/>
+        <xs:attribute name="year" type="uni:AcademicYearType" use="required"/>
+        <xs:attribute name="semester" type="uni:SemesterType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="ProgrammeType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="code" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="CoursesType">
+        <xs:sequence>
+            <xs:element name="course" type="uni:CourseType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- A course: code and credit value are identifiers/metadata -> attributes;
+         title, lecturer and grade are primary content -> elements -->
+    <xs:complexType name="CourseType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="lecturer" type="xs:string"/>
+            <xs:element name="grade" type="uni:GradeType"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+        <xs:attribute name="credits" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <!-- Restricted / simple types used for validation -->
+    <xs:simpleType name="StudentIdType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="S[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AcademicYearType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SemesterType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GradeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="A-"/>
+            <xs:enumeration value="B+"/>
+            <xs:enumeration value="B"/>
+            <xs:enumeration value="B-"/>
+            <xs:enumeration value="C+"/>
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="C-"/>
+            <xs:enumeration value="D"/>
+            <xs:enumeration value="E"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
